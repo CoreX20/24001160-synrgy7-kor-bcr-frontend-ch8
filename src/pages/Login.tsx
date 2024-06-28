@@ -44,7 +44,7 @@ const Login: React.FC = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");  
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+    const [, setIsLoggedIn] = useState<boolean>(false);
     const [isLoginFailed, setIsLoginFailed] = useState<boolean>(false);
     const token = localStorage.getItem("token");
     useEffect(()=> {

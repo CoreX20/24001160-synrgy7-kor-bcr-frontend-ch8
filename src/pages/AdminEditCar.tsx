@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Layout from '../layout/DashboardLayout';
 
@@ -34,7 +34,7 @@ const AdminEditCar: React.FC = () => {
         formData.append('finish_rent', finishRent);
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch(`https://condemned-lauretta-bcr-695ec39f.koyeb.app/cars/${id}`, {
+            await fetch(`https://condemned-lauretta-bcr-695ec39f.koyeb.app/cars/${id}`, {
                 method : "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`
