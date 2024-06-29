@@ -31,15 +31,16 @@ const AdminAddCar: React.FC= () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        const checkForm = () => {
+            if (name && price && photo && startRent && finishRent) {
+              setSubmitButtonDisabled(false);
+            } else {
+              setSubmitButtonDisabled(true);
+            }
+        };
         checkForm();
     }, [name, price, photo, startRent, finishRent]);
-    const checkForm = () => {
-        if (name && price && photo && startRent && finishRent) {
-          setSubmitButtonDisabled(false);
-        } else {
-          setSubmitButtonDisabled(true);
-        }
-    };
+    
     const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = e.target.files;
         if (files && files.length > 0) {

@@ -11,21 +11,20 @@ const UserProvider : React.FC<ContextProps> = ({children}) => {
     const token = localStorage.getItem("token");
     const [user, setUser] = useState<any>([])
 
-    const getUser = async() => {
-        const response = await fetch("http://localhost:3000/user/whoami", {
-            method : "GET",
-            headers : {
-                Authorization : `Bearer ${token}`
-            }
-        });
-
-        const data = await response.json();
-        setUser(data)
-    }    
-
     useEffect(()=>{
+        const getUser = async() => {
+            const response = await fetch("https://condemned-lauretta-bcr-695ec39f.koyeb.app/user/whoami", {
+                method : "GET",
+                headers : {
+                    Authorization : `Bearer ${token}`
+                }
+            });
+    
+            const data = await response.json();
+            setUser(data)
+        } 
         getUser();
-    },[])
+    }, [token])
 
     return(
         <UserContext.Provider value={user}>

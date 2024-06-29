@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "jest"
   },
   "dependencies": {
@@ -29,6 +28,7 @@
     "@types/bootstrap": "^5.2.10",
     "@types/jest": "^29.5.12",
     "@types/jquery": "^3.5.30",
+    "@types/owl.carousel": "^2.3.6",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-owl-carousel": "^2.3.0",

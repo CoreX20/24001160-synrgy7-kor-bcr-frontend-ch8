@@ -38,17 +38,17 @@ const FindCar: React.FC = () => {
   const [carSearchButtonDisabled, setCarSearchButtonDisabled] = useState(true);
 
   useEffect(() => {
+    const checkForm = () => {
+      if (tipeDriver && inputDate && inputTime) {
+        setCarSearchButtonDisabled(false);
+      } else {
+        setCarSearchButtonDisabled(true);
+      }
+    };
+
     checkForm();
   }, [tipeDriver, inputDate, inputTime]);
-
-  const checkForm = () => {
-    if (tipeDriver && inputDate && inputTime) {
-      setCarSearchButtonDisabled(false);
-    } else {
-      setCarSearchButtonDisabled(true);
-    }
-  };
-
+  
   const handleTipeDriverChange = (e:any) => {
     setTipeDriver(e.target.value);
   };

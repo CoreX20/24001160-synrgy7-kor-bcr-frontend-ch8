@@ -1,19 +1,9 @@
 import React from 'react';
-// import * as $ from 'jquery';
-import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel';
+import OwlCarousel from './OwlCarousel';
 const Main: React.FC = () => {
-    const options = {
-        loop: true,
-         margin: 20,
-        stagePadding: 50,
-        autoWidth: true,
-        items: 1,
-        center: true,
-        responsiveClass: true,
-        nav: true,
-    }
     return (
         <>
         <section id="our-services" className="our-services row">
@@ -117,78 +107,7 @@ const Main: React.FC = () => {
             <h2 className="fw-bold">Testimonial</h2>
             <p>Berbagai review positif dari para pelanggan kami</p>
             </div>
-            {/* <Carousel/> */}
-            <OwlCarousel className="owl-carousel owl-theme" {...options}>
-                <div className="item d-flex align-items-center justify-content-center">
-                    <div className="d-lg-flex flex-lg-row align-items-center justify-content-center">
-                    <div className="col-lg-3 d-flex justify-content-center">
-                        <img src="https://res.cloudinary.com/daoqz3rdr/image/upload/v1710090690/1966071e0e7f316b62332951ccdc129a_jqv6v4.png" className="rounded-circle" alt="..." style={{width: 80}} />
-                    </div>
-                    <div className="col-lg">
-                        <div className="rate-star mb-lg-2">
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                        </div>
-                        <p>
-                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod”
-                        </p>
-                        <p className="fw-bold">John Dee 32, Bromo</p>
-                    </div>
-                    </div>
-                </div>
-                <div className="item d-flex align-items-center justify-content-center">
-                    <div className="d-lg-flex flex-lg-row align-items-center justify-content-center">
-                    <div className="col-lg-3 d-flex justify-content-center">
-                        <img src="https://res.cloudinary.com/daoqz3rdr/image/upload/v1710090690/1966071e0e7f316b62332951ccdc129a_jqv6v4.png" className="rounded-circle" alt="..." style={{width: 80}} />
-                    </div>
-                    <div className="col-lg">
-                        <div className="rate-star mb-lg-2">
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                        </div>
-                        <p>
-                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod”
-                        </p>
-                        <p className="fw-bold">John Dee 32, Bromo</p>
-                    </div>
-                    </div>
-                </div>
-                <div className="item d-flex align-items-center justify-content-center">
-                    <div className="d-lg-flex flex-lg-row align-items-center justify-content-center">
-                    <div className="col-lg-3 d-flex justify-content-center">
-                        <img src="https://res.cloudinary.com/daoqz3rdr/image/upload/v1710090691/3f0d2d46b5a945c7deefdcc78b583af6_v4xcz3.png" className="rounded-circle" alt="..." style={{width: 80}} />
-                    </div>
-                    <div className="col-lg">
-                        <div className="rate-star mb-lg-2">
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                            <i className="bi bi-star-fill pe-1" style={{color: '#f9cc00',fontSize: 15}}></i>
-                        </div>
-                        <p>
-                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod”
-                        </p>
-                        <p className="fw-bold">John Dee 32, Bromo</p>
-                    </div>
-                    </div>
-                </div>
-            </OwlCarousel>
+            <OwlCarousel/>
         </section>
         {/*CTA Banner*/}
         <section id="cta-banner">

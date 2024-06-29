@@ -44,7 +44,7 @@ const CarCard : React.FC<CarCardProps> = ({ car }) => {
   const handleConfirmDelete = async() => {
     try {
       const token = localStorage.getItem("token");
-      await fetch(`http://localhost:3000/cars/${car.id}`, {
+      await fetch(`https://condemned-lauretta-bcr-695ec39f.koyeb.app/cars/${car.id}`, {
         method : "DELETE",
         headers: {
           Authorization: `Bearer ${token}`
@@ -53,7 +53,7 @@ const CarCard : React.FC<CarCardProps> = ({ car }) => {
       setShowDeleteModal(false);
       window.location.reload();
     } catch (error) {
-      
+      console.error("Error deleting car:", error);
     }
   }
   return (
